@@ -93,7 +93,10 @@ input[type="radio"] {
 }
 
 .card__btn {
+  width: 100%;
+  border: none;
   text-transform: uppercase;
+  color: var(--col-white);
   padding: 1em 2em;
   background-color: var(--col-orange);
   border-radius: 2em;
