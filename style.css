@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --col-orange: hsl(25, 97%, 53%);
+  --col-white: hsl(0, 0%, 100%);
+  --col-gray: hsl(217, 12%, 63%);
+  --col-gray-dk: hsl(216, 12%, 54%);
+  --col-blue: hsl(213, 19%, 18%);
+  --col-blue-dk: hsl(216, 12%, 8%);
+  --fs-main: 15px;
+  --fw-normal: 400;
+  --fw-bold: 700;
+  --ff-overpass: 'Overpass', sans-serif;
+}
+
+body {
+  font-family: var(--ff-overpass);
+  font-size: var(--fs-main);
+  
+  color: var(--col-white);
+}
+
+.container {
+  background-color: var(--col-blue-dk);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background-image: radial-gradient(at top, var(--col-blue), var(--col-blue-dk));
+  border-radius: 20px;
+  padding: 2em;
+  width: 28em;
+  height: 30em;
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+.card__title {
+  margin-top: 2em;
+}
+
+.card__body {
+  color: var(--col-gray-dk);
+  line-height: 1.6;
+  margin: 2em 0;
+}
+
+/* SUBMIT PAGE */
+.star {
+  background-color: var(--col-blue) ;
+  padding: 1em;
+  border-radius: 50%;
+}
+
+.ratings-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
+
+.rating-container {
+  padding: 1.8em;
+  background-color: var(--col-blue);
+  display: inline-block;
+  position: relative;
+  border-radius: 50%;
+}
+
+.rating-value {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.card__btn {
+  text-transform: uppercase;
+  padding: 1em 2em;
+  background-color: var(--col-orange);
+  border-radius: 2em;
+  text-align: center;
+  font-weight: var(--fw-bold);
+}
+
+/* SUCCESS PAGE */
+#success-page {
+  text-align: center;
+}
+
+.success-img {
+  display: block;
+  margin: auto;
+  padding: 1.5em;
+}
+.success-msg {
+  display: inline-block;
+  color: var(--col-orange);
+  padding: .5em 1.2em;
+  border-radius: 2em;
+  margin: 2em 0;
+  background-color: var(--col-blue);
+}
+
+.success-body {
+  color: var(--col-gray-dk);
+  line-height: 1.6;
+  margin: .8em;
+  
+}
+
+/* ACTIVE STATES */
+.rating-container:hover {
+  cursor: pointer;
+  background-color: var(--col-orange);
+}
+
+.card__btn:hover {
+  cursor: pointer;
+  background-color: var(--col-white);
+  color: var(--col-orange);
+}
+
+/* SELECTED */
+input[type="radio"]:checked + label {
+  background-color: var(--col-gray);
+}
